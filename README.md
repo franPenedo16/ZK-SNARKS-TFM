@@ -4,7 +4,7 @@
 ---
 
 ## SCOPE
-The scope of this project is to compare different implementations for building zk-SNARK circuits and to evaluate the time required to generate the proofs.
+The scope of this project is to compare different implementations for building zero-knowledge proofs—including two domain-specific languages for zk-SNARKs (Circom and Noir), a C++ library for zk-SNARKs (libsnark), and a zk-VM based on zk-STARKs (RISC Zero)—and to evaluate the time required to generate each proof. Although RISC Zero follows a different proof paradigm, it offers a valuable point of comparison across diverse zero-knowledge methods.
 
 ## THE PROOF
 The proof consists in three parts:
