@@ -1,0 +1,20 @@
+include_directories(.)
+
+add_executable(
+  game
+
+  game.cpp
+)
+target_link_libraries(
+  game
+
+  snark
+)
+target_include_directories(
+  game
+
+  PUBLIC
+  ${DEPENDS_DIR}/libsnark
+  ${DEPENDS_DIR}/libsnark/depends/libfqfft
+  ${DEPENDS_DIR}/libsnark/depends/libff
+)
