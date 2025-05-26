@@ -2,3 +2,5 @@ node_modules/
 *.ptau
 *.gz
 text-helpvalidation
+risczero/target
+Cargo.lock

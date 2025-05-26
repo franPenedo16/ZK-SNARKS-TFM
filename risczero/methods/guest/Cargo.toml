@@ -1,0 +1,12 @@
+[package]
+name = "guest_code_for_tfm"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[dependencies]
+risc0-zkvm = "2.0.2"
+ark-bn254 = "0.5.0"
+light-poseidon = "0.3.0"
+json-core = { path = "../../core" }
