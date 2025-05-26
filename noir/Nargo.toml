@@ -1,0 +1,6 @@
+[package]
+name = "sudoku_game"
+type = "bin"
+authors = [""]
+
+[dependencies]

@@ -1,2 +1,4 @@
 node_modules/
 *.ptau
+*.gz
+text-helpvalidation
