@@ -88,7 +88,7 @@ The exact number of private inputs depends on the specific implementation, optim
 - Sudoku solution
 
 ### Inputs to the Circuit
-All zk-SNARK circuits in this project are initialized using the same structure: a JSON input that includes the DNI (number and letter), the Sudoku puzzle (both the problem and its proposed solution), and the password.
+All zk-SNARK circuits in this project are initialized using the same structure: a JSON input that includes the DNI (number and letter), the Sudoku puzzle (both the problem and its proposed solution), and the password. Note that Noir uses a TOML file instead of JSON, but it requires the same fields.
 
 
 ## FINITE FIELD
