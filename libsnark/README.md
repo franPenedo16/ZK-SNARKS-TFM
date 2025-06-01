@@ -27,6 +27,9 @@ To ensure compatibility with libsnark and its dependencies (GMP, protobuf, etc.)
 - **proof/**:  
   Directory where the resulting zk-SNARK proof and the verification key are stored after execution.
 
+- **stats/**:
+  Directory with shell scripts that repeatedly run the proof-generation process to collect memory usage metrics (PSS and RSS) and measure elapsed execution time.
+
 - **data.json**:  
   JSON file containing the inputs used for generating the proof, including the password, DNI, and Sudoku data.
 
@@ -48,3 +51,11 @@ To ensure compatibility with libsnark and its dependencies (GMP, protobuf, etc.)
 `docker build -t libsnark-sudoku .` => Builds the Docker container using the specifications defined in the Dockerfile. The container includes all necessary dependencies to compile and run libsnark.
 
 `docker run -v "$(pwd)/proof:/proof" -w /root/libsnark-tutorial/src -it libsnark-sudoku /bin/bash -c "../build/src/game"` => Executes the proof generation process inside the container. The command runs the compiled game binary, which generates the zk-SNARK proof and verification key. The -v flag mounts the ./proof directory from the host machine into the container, allowing the output files (proof and verification key) to be saved and accessed from outside the container.
+
+- `docker run -v "$(pwd)/stats:/stats" -w /root/libsnark-tutorial/src -it libsnark-sudoku /bin/bash -c "./memory-pss-usage.sh"`
+
+- `docker run -v "$(pwd)/stats:/stats" -w /root/libsnark-tutorial/src -it libsnark-sudoku /bin/bash -c "./memory-rss-usage.sh"`
+
+- `docker run -v "$(pwd)/stats:/stats" -w /root/libsnark-tutorial/src -it libsnark-sudoku /bin/bash -c "./elapsed_secs.sh"` 
+  
+  - This commands runs the tests inside the container to measure memory usage in terms of RSS (Resident Set Size), PSS (Proportional Set Size) and elapses excecution time. The -v flag mounts the ./stats directory from the host machine into the container, allowing the output json to be saved and accessed from outside the container.

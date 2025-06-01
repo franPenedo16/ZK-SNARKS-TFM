@@ -7,6 +7,7 @@ RUN apt-get update && \
     wget unzip curl \
     build-essential cmake git libgmp3-dev libprocps4-dev python-markdown libboost-all-dev libssl-dev pkg-config
 
+RUN apt-get install bc
 
 RUN git clone https://github.com/coder5876/libsnark-tutorial.git \
   && cd libsnark-tutorial \
@@ -41,6 +42,14 @@ RUN cd libsnark-tutorial \
  && mkdir build && cd build && cmake .. \
  && make
 
-
 COPY data.json libsnark-tutorial/src/
+
+
+RUN mkdir /stats
+COPY  stats/memory-pss-usage.sh libsnark-tutorial/src/
+COPY  stats/memory-rss-usage.sh libsnark-tutorial/src/
+COPY  stats/elapsed_secs.sh libsnark-tutorial/src/
+
+
+
 

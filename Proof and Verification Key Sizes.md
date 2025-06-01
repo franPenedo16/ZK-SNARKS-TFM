@@ -1,15 +1,15 @@
-#  PROOF AND KEY SIZES COMPARISON
+#  PROOF AND VERIFICATION KEY SIZES COMPARISON
 
 ## Description
 This file summarizes the size of the generated zk-proofs and verification keys for each implementation used in the project. The goal is to highlight the relative footprint of the artifacts produced by different zero-knowledge frameworks when proving the same logic (DNI validation, password hashing, Sudoku solving).
 
 ## Proof
-| IMPLEMENTATION | FILE        | SIZE        |
-| -----------    | ----------- | ----------- |
+| IMPLEMENTATION | FILE          | SIZE        |
+| -----------    | ------------- | ----------- |
 | Circom         | `proof.json`  |  805 B      |
-| libsnark       | `proof_data`  |  1398 B      |
-| noir           | `proof`       |  19332 B     |
-| risc-zero      | `receipt.bin` |  550204 B    |
+| libsnark       | `proof_data`  |  1398 B     |
+| noir           | `proof`       |  19332 B    |
+| risc-zero      | `receipt.bin` |  550204 B   |
 
 
 

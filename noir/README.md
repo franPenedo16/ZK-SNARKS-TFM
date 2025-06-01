@@ -16,21 +16,32 @@ Noir uses the Barretenberg (bb) proving system to compile, prove, and verify the
 
 ### Files
 
-- **src/**: Contains the Noir source file (.nr) with the circuit logic.
+- **src/**: 
+  Contains the Noir source file (.nr) with the circuit logic.
   
-- **target/**: Output directory containing:
-  - **proof**: The generated zk-SNARK proof.
+- **stats**:
+  Directory with shell scripts that repeatedly run the proof-generation process to collect memory usage metrics (PSS and RSS) and measure elapsed execution time.
   
-  - **sudoku_game.json**: Compiled circuit bytecode.
+- **target/**: 
+  Output directory containing:
+
+  - **proof**: 
+    The generated zk-SNARK proof.
   
-  - **vk**: The verification key.
+  - **sudoku_game.json**: 
+    Compiled circuit bytecode.
   
-- **Nargo.toml**: Project configuration file for Noir.
+  - **vk**: 
+    The verification key.
   
-- **Prover.toml**:  Input configuration for the circuit execution, equivalent to the JSON used by other frameworks to supply public and private inputs.
+- **Nargo.toml**: 
+  Project configuration file for Noir.
+  
+- **Prover.toml**:  
+  Input configuration for the circuit execution, equivalent to the JSON used by other frameworks to supply public and private inputs.
+  
 
 ### Commands to Generate the Proof
-
 
 `nargo check` => Command to generate the Prover.toml file.
 
@@ -41,4 +52,12 @@ Noir uses the Barretenberg (bb) proving system to compile, prove, and verify the
 `bb write_vk -b ./target/sudoku_game.json -o ./target` => Creates the verification key (vk).
 
 `bb verify -k ./target/vk -p ./target/proof` => Verifies the generated proof using the verification key.
+
+**Stats**
+
+`./elapsed_secs.sh` => This script repeatedly runs `bb prove -b ./target/sudoku_game.json -w ./target/sudoku_game.gz -o ./target` to measure its execution time (ignoring initial warmup runs), and stores the timing results in a JSON file.
+
+`./memory-pss-usage.sh` => This script repeatedly runs `bb prove -b ./target/sudoku_game.json -w ./target/sudoku_game.gz -o ./target`, samples its memory usage (PSS) while it runs, skips initial warmups, and logs timestamped memory stats for each valid run into a JSON file.
+
+`./memory-rss-usage.sh` => This script repeatedly runs `bb prove -b ./target/sudoku_game.json -w ./target/sudoku_game.gz -o ./target`, samples its memory usage (RSS) while it runs, skips initial warmups, and logs timestamped memory stats for each valid run into a JSON file.
 

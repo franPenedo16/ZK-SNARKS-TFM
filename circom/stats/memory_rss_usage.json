@@ -1,0 +1,649 @@
+[
+  {
+    "run": 1,
+    "samples": [
+      {"timestamp": 0.008, "kib": 12212, "percent": 0.08}
+,
+      {"timestamp": 0.067, "kib": 62192, "percent": 0.39}
+,
+      {"timestamp": 0.125, "kib": 74224, "percent": 0.46}
+,
+      {"timestamp": 0.184, "kib": 75468, "percent": 0.47}
+,
+      {"timestamp": 0.245, "kib": 77096, "percent": 0.48}
+,
+      {"timestamp": 0.310, "kib": 174684, "percent": 1.09}
+,
+      {"timestamp": 0.385, "kib": 231628, "percent": 1.44}
+,
+      {"timestamp": 0.448, "kib": 255312, "percent": 1.59}
+
+    ]
+  }
+,
+  {
+    "run": 2,
+    "samples": [
+      {"timestamp": 0.011, "kib": 14044, "percent": 0.09}
+,
+      {"timestamp": 0.071, "kib": 63064, "percent": 0.39}
+,
+      {"timestamp": 0.128, "kib": 75272, "percent": 0.47}
+,
+      {"timestamp": 0.186, "kib": 75220, "percent": 0.47}
+,
+      {"timestamp": 0.257, "kib": 141036, "percent": 0.88}
+,
+      {"timestamp": 0.346, "kib": 181592, "percent": 1.13}
+,
+      {"timestamp": 0.420, "kib": 226932, "percent": 1.41}
+,
+      {"timestamp": 0.486, "kib": 254748, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 3,
+    "samples": [
+      {"timestamp": 0.007, "kib": 6076, "percent": 0.04}
+,
+      {"timestamp": 0.066, "kib": 62892, "percent": 0.39}
+,
+      {"timestamp": 0.124, "kib": 75256, "percent": 0.47}
+,
+      {"timestamp": 0.181, "kib": 75480, "percent": 0.47}
+,
+      {"timestamp": 0.257, "kib": 138664, "percent": 0.86}
+,
+      {"timestamp": 0.329, "kib": 206400, "percent": 1.28}
+,
+      {"timestamp": 0.399, "kib": 254788, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 4,
+    "samples": [
+      {"timestamp": 0.006, "kib": 14604, "percent": 0.09}
+,
+      {"timestamp": 0.065, "kib": 63168, "percent": 0.39}
+,
+      {"timestamp": 0.123, "kib": 74832, "percent": 0.47}
+,
+      {"timestamp": 0.181, "kib": 75648, "percent": 0.47}
+,
+      {"timestamp": 0.240, "kib": 84408, "percent": 0.52}
+,
+      {"timestamp": 0.303, "kib": 178972, "percent": 1.11}
+,
+      {"timestamp": 0.376, "kib": 230980, "percent": 1.44}
+,
+      {"timestamp": 0.440, "kib": 255036, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 5,
+    "samples": [
+      {"timestamp": 0.010, "kib": 12296, "percent": 0.08}
+,
+      {"timestamp": 0.069, "kib": 60412, "percent": 0.38}
+,
+      {"timestamp": 0.129, "kib": 75320, "percent": 0.47}
+,
+      {"timestamp": 0.186, "kib": 76004, "percent": 0.47}
+,
+      {"timestamp": 0.245, "kib": 87316, "percent": 0.54}
+,
+      {"timestamp": 0.308, "kib": 180552, "percent": 1.12}
+,
+      {"timestamp": 0.375, "kib": 231192, "percent": 1.44}
+,
+      {"timestamp": 0.438, "kib": 255064, "percent": 1.59}
+
+    ]
+  }
+,
+  {
+    "run": 6,
+    "samples": [
+      {"timestamp": 0.013, "kib": 16288, "percent": 0.10}
+,
+      {"timestamp": 0.074, "kib": 57752, "percent": 0.36}
+,
+      {"timestamp": 0.132, "kib": 74556, "percent": 0.46}
+,
+      {"timestamp": 0.190, "kib": 75344, "percent": 0.47}
+,
+      {"timestamp": 0.259, "kib": 76932, "percent": 0.48}
+,
+      {"timestamp": 0.347, "kib": 160012, "percent": 0.99}
+,
+      {"timestamp": 0.424, "kib": 214972, "percent": 1.34}
+,
+      {"timestamp": 0.488, "kib": 254468, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 7,
+    "samples": [
+      {"timestamp": 0.006, "kib": 14600, "percent": 0.09}
+,
+      {"timestamp": 0.065, "kib": 60488, "percent": 0.38}
+,
+      {"timestamp": 0.124, "kib": 73856, "percent": 0.46}
+,
+      {"timestamp": 0.182, "kib": 75428, "percent": 0.47}
+,
+      {"timestamp": 0.239, "kib": 80876, "percent": 0.50}
+,
+      {"timestamp": 0.305, "kib": 173484, "percent": 1.08}
+,
+      {"timestamp": 0.386, "kib": 231996, "percent": 1.44}
+,
+      {"timestamp": 0.450, "kib": 254916, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 8,
+    "samples": [
+      {"timestamp": 0.012, "kib": 14448, "percent": 0.09}
+,
+      {"timestamp": 0.074, "kib": 60720, "percent": 0.38}
+,
+      {"timestamp": 0.131, "kib": 74364, "percent": 0.46}
+,
+      {"timestamp": 0.188, "kib": 75064, "percent": 0.47}
+,
+      {"timestamp": 0.246, "kib": 83256, "percent": 0.52}
+,
+      {"timestamp": 0.306, "kib": 180888, "percent": 1.12}
+,
+      {"timestamp": 0.377, "kib": 230104, "percent": 1.43}
+,
+      {"timestamp": 0.440, "kib": 254068, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 9,
+    "samples": [
+      {"timestamp": 0.010, "kib": 14664, "percent": 0.09}
+,
+      {"timestamp": 0.070, "kib": 64928, "percent": 0.40}
+,
+      {"timestamp": 0.131, "kib": 75212, "percent": 0.47}
+,
+      {"timestamp": 0.194, "kib": 76256, "percent": 0.47}
+,
+      {"timestamp": 0.254, "kib": 76016, "percent": 0.47}
+,
+      {"timestamp": 0.333, "kib": 167608, "percent": 1.04}
+,
+      {"timestamp": 0.408, "kib": 213800, "percent": 1.33}
+,
+      {"timestamp": 0.480, "kib": 254664, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 10,
+    "samples": [
+      {"timestamp": 0.007, "kib": 14312, "percent": 0.09}
+,
+      {"timestamp": 0.068, "kib": 62056, "percent": 0.39}
+,
+      {"timestamp": 0.126, "kib": 74740, "percent": 0.46}
+,
+      {"timestamp": 0.184, "kib": 75372, "percent": 0.47}
+,
+      {"timestamp": 0.253, "kib": 116020, "percent": 0.72}
+,
+      {"timestamp": 0.318, "kib": 183616, "percent": 1.14}
+,
+      {"timestamp": 0.393, "kib": 244972, "percent": 1.52}
+
+    ]
+  }
+,
+  {
+    "run": 11,
+    "samples": [
+      {"timestamp": 0.004, "kib": 5632, "percent": 0.03}
+,
+      {"timestamp": 0.061, "kib": 64484, "percent": 0.40}
+,
+      {"timestamp": 0.119, "kib": 75620, "percent": 0.47}
+,
+      {"timestamp": 0.176, "kib": 75204, "percent": 0.47}
+,
+      {"timestamp": 0.240, "kib": 125116, "percent": 0.78}
+,
+      {"timestamp": 0.305, "kib": 183784, "percent": 1.14}
+,
+      {"timestamp": 0.375, "kib": 241948, "percent": 1.50}
+,
+      {"timestamp": 0.436, "kib": 150380, "percent": 0.93}
+
+    ]
+  }
+,
+  {
+    "run": 12,
+    "samples": [
+      {"timestamp": 0.011, "kib": 16200, "percent": 0.10}
+,
+      {"timestamp": 0.072, "kib": 62656, "percent": 0.39}
+,
+      {"timestamp": 0.129, "kib": 75336, "percent": 0.47}
+,
+      {"timestamp": 0.187, "kib": 76020, "percent": 0.47}
+,
+      {"timestamp": 0.271, "kib": 155200, "percent": 0.96}
+,
+      {"timestamp": 0.341, "kib": 226836, "percent": 1.41}
+,
+      {"timestamp": 0.403, "kib": 252884, "percent": 1.57}
+
+    ]
+  }
+,
+  {
+    "run": 13,
+    "samples": [
+      {"timestamp": 0.008, "kib": 8572, "percent": 0.05}
+,
+      {"timestamp": 0.068, "kib": 60704, "percent": 0.38}
+,
+      {"timestamp": 0.127, "kib": 74232, "percent": 0.46}
+,
+      {"timestamp": 0.184, "kib": 75652, "percent": 0.47}
+,
+      {"timestamp": 0.243, "kib": 75592, "percent": 0.47}
+,
+      {"timestamp": 0.320, "kib": 139240, "percent": 0.87}
+,
+      {"timestamp": 0.395, "kib": 199780, "percent": 1.24}
+,
+      {"timestamp": 0.473, "kib": 253572, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 14,
+    "samples": [
+      {"timestamp": 0.012, "kib": 15400, "percent": 0.10}
+,
+      {"timestamp": 0.074, "kib": 64680, "percent": 0.40}
+,
+      {"timestamp": 0.132, "kib": 75772, "percent": 0.47}
+,
+      {"timestamp": 0.191, "kib": 75528, "percent": 0.47}
+,
+      {"timestamp": 0.267, "kib": 137136, "percent": 0.85}
+,
+      {"timestamp": 0.339, "kib": 203732, "percent": 1.27}
+,
+      {"timestamp": 0.408, "kib": 256700, "percent": 1.60}
+
+    ]
+  }
+,
+  {
+    "run": 15,
+    "samples": [
+      {"timestamp": 0.004, "kib": 9936, "percent": 0.06}
+,
+      {"timestamp": 0.075, "kib": 62220, "percent": 0.39}
+,
+      {"timestamp": 0.137, "kib": 74364, "percent": 0.46}
+,
+      {"timestamp": 0.198, "kib": 75560, "percent": 0.47}
+,
+      {"timestamp": 0.256, "kib": 81652, "percent": 0.51}
+,
+      {"timestamp": 0.328, "kib": 175004, "percent": 1.09}
+,
+      {"timestamp": 0.397, "kib": 212720, "percent": 1.32}
+,
+      {"timestamp": 0.465, "kib": 254520, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 16,
+    "samples": [
+      {"timestamp": 0.007, "kib": 14464, "percent": 0.09}
+,
+      {"timestamp": 0.066, "kib": 60932, "percent": 0.38}
+,
+      {"timestamp": 0.125, "kib": 75000, "percent": 0.47}
+,
+      {"timestamp": 0.184, "kib": 76120, "percent": 0.47}
+,
+      {"timestamp": 0.255, "kib": 117532, "percent": 0.73}
+,
+      {"timestamp": 0.321, "kib": 181472, "percent": 1.13}
+,
+      {"timestamp": 0.396, "kib": 240348, "percent": 1.49}
+,
+      {"timestamp": 0.460, "kib": 214864, "percent": 1.34}
+
+    ]
+  }
+,
+  {
+    "run": 17,
+    "samples": [
+      {"timestamp": 0.013, "kib": 20292, "percent": 0.13}
+,
+      {"timestamp": 0.074, "kib": 61384, "percent": 0.38}
+,
+      {"timestamp": 0.133, "kib": 75124, "percent": 0.47}
+,
+      {"timestamp": 0.191, "kib": 75860, "percent": 0.47}
+,
+      {"timestamp": 0.250, "kib": 86100, "percent": 0.54}
+,
+      {"timestamp": 0.314, "kib": 181436, "percent": 1.13}
+,
+      {"timestamp": 0.386, "kib": 230500, "percent": 1.43}
+,
+      {"timestamp": 0.448, "kib": 254572, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 18,
+    "samples": [
+      {"timestamp": 0.013, "kib": 18448, "percent": 0.11}
+,
+      {"timestamp": 0.074, "kib": 62416, "percent": 0.39}
+,
+      {"timestamp": 0.131, "kib": 74740, "percent": 0.46}
+,
+      {"timestamp": 0.189, "kib": 75176, "percent": 0.47}
+,
+      {"timestamp": 0.249, "kib": 85332, "percent": 0.53}
+,
+      {"timestamp": 0.342, "kib": 176108, "percent": 1.09}
+,
+      {"timestamp": 0.418, "kib": 227100, "percent": 1.41}
+,
+      {"timestamp": 0.482, "kib": 254784, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 19,
+    "samples": [
+      {"timestamp": 0.013, "kib": 18600, "percent": 0.12}
+,
+      {"timestamp": 0.076, "kib": 60888, "percent": 0.38}
+,
+      {"timestamp": 0.136, "kib": 75148, "percent": 0.47}
+,
+      {"timestamp": 0.193, "kib": 76236, "percent": 0.47}
+,
+      {"timestamp": 0.254, "kib": 84432, "percent": 0.52}
+,
+      {"timestamp": 0.325, "kib": 177156, "percent": 1.10}
+,
+      {"timestamp": 0.399, "kib": 227300, "percent": 1.41}
+,
+      {"timestamp": 0.462, "kib": 254612, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 20,
+    "samples": [
+      {"timestamp": 0.013, "kib": 14852, "percent": 0.09}
+,
+      {"timestamp": 0.074, "kib": 60724, "percent": 0.38}
+,
+      {"timestamp": 0.134, "kib": 74308, "percent": 0.46}
+,
+      {"timestamp": 0.192, "kib": 75204, "percent": 0.47}
+,
+      {"timestamp": 0.250, "kib": 84008, "percent": 0.52}
+,
+      {"timestamp": 0.312, "kib": 176912, "percent": 1.10}
+,
+      {"timestamp": 0.380, "kib": 231032, "percent": 1.44}
+,
+      {"timestamp": 0.442, "kib": 255284, "percent": 1.59}
+
+    ]
+  }
+,
+  {
+    "run": 21,
+    "samples": [
+      {"timestamp": 0.011, "kib": 15272, "percent": 0.09}
+,
+      {"timestamp": 0.074, "kib": 60380, "percent": 0.38}
+,
+      {"timestamp": 0.132, "kib": 73852, "percent": 0.46}
+,
+      {"timestamp": 0.191, "kib": 75092, "percent": 0.47}
+,
+      {"timestamp": 0.249, "kib": 85744, "percent": 0.53}
+,
+      {"timestamp": 0.310, "kib": 179924, "percent": 1.12}
+,
+      {"timestamp": 0.388, "kib": 231436, "percent": 1.44}
+,
+      {"timestamp": 0.453, "kib": 254904, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 22,
+    "samples": [
+      {"timestamp": 0.011, "kib": 14916, "percent": 0.09}
+,
+      {"timestamp": 0.075, "kib": 63404, "percent": 0.39}
+,
+      {"timestamp": 0.133, "kib": 74492, "percent": 0.46}
+,
+      {"timestamp": 0.192, "kib": 75684, "percent": 0.47}
+,
+      {"timestamp": 0.249, "kib": 76816, "percent": 0.48}
+,
+      {"timestamp": 0.317, "kib": 173636, "percent": 1.08}
+,
+      {"timestamp": 0.388, "kib": 212552, "percent": 1.32}
+,
+      {"timestamp": 0.458, "kib": 254588, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 23,
+    "samples": [
+      {"timestamp": 0.012, "kib": 14604, "percent": 0.09}
+,
+      {"timestamp": 0.072, "kib": 63448, "percent": 0.39}
+,
+      {"timestamp": 0.130, "kib": 76200, "percent": 0.47}
+,
+      {"timestamp": 0.189, "kib": 76076, "percent": 0.47}
+,
+      {"timestamp": 0.253, "kib": 127436, "percent": 0.79}
+,
+      {"timestamp": 0.319, "kib": 181548, "percent": 1.13}
+,
+      {"timestamp": 0.391, "kib": 241100, "percent": 1.50}
+,
+      {"timestamp": 0.451, "kib": 181056, "percent": 1.13}
+
+    ]
+  }
+,
+  {
+    "run": 24,
+    "samples": [
+      {"timestamp": 0.013, "kib": 17248, "percent": 0.11}
+,
+      {"timestamp": 0.075, "kib": 64892, "percent": 0.40}
+,
+      {"timestamp": 0.132, "kib": 76088, "percent": 0.47}
+,
+      {"timestamp": 0.190, "kib": 76304, "percent": 0.47}
+,
+      {"timestamp": 0.259, "kib": 107632, "percent": 0.67}
+,
+      {"timestamp": 0.322, "kib": 177632, "percent": 1.10}
+,
+      {"timestamp": 0.390, "kib": 230376, "percent": 1.43}
+,
+      {"timestamp": 0.454, "kib": 252308, "percent": 1.57}
+
+    ]
+  }
+,
+  {
+    "run": 25,
+    "samples": [
+      {"timestamp": 0.011, "kib": 16504, "percent": 0.10}
+,
+      {"timestamp": 0.072, "kib": 63444, "percent": 0.39}
+,
+      {"timestamp": 0.130, "kib": 74896, "percent": 0.47}
+,
+      {"timestamp": 0.188, "kib": 74992, "percent": 0.47}
+,
+      {"timestamp": 0.247, "kib": 84756, "percent": 0.53}
+,
+      {"timestamp": 0.308, "kib": 179384, "percent": 1.11}
+,
+      {"timestamp": 0.374, "kib": 230024, "percent": 1.43}
+,
+      {"timestamp": 0.439, "kib": 254772, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 26,
+    "samples": [
+      {"timestamp": 0.012, "kib": 14320, "percent": 0.09}
+,
+      {"timestamp": 0.072, "kib": 63176, "percent": 0.39}
+,
+      {"timestamp": 0.130, "kib": 75156, "percent": 0.47}
+,
+      {"timestamp": 0.188, "kib": 76092, "percent": 0.47}
+,
+      {"timestamp": 0.246, "kib": 77496, "percent": 0.48}
+,
+      {"timestamp": 0.310, "kib": 174292, "percent": 1.08}
+,
+      {"timestamp": 0.384, "kib": 224356, "percent": 1.39}
+,
+      {"timestamp": 0.446, "kib": 255056, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 27,
+    "samples": [
+      {"timestamp": 0.012, "kib": 15404, "percent": 0.10}
+,
+      {"timestamp": 0.072, "kib": 63388, "percent": 0.39}
+,
+      {"timestamp": 0.129, "kib": 75820, "percent": 0.47}
+,
+      {"timestamp": 0.187, "kib": 77216, "percent": 0.48}
+,
+      {"timestamp": 0.256, "kib": 133504, "percent": 0.83}
+,
+      {"timestamp": 0.319, "kib": 189900, "percent": 1.18}
+,
+      {"timestamp": 0.398, "kib": 251328, "percent": 1.56}
+
+    ]
+  }
+,
+  {
+    "run": 28,
+    "samples": [
+      {"timestamp": 0.006, "kib": 15076, "percent": 0.09}
+,
+      {"timestamp": 0.064, "kib": 65332, "percent": 0.41}
+,
+      {"timestamp": 0.123, "kib": 76108, "percent": 0.47}
+,
+      {"timestamp": 0.181, "kib": 76956, "percent": 0.48}
+,
+      {"timestamp": 0.239, "kib": 78500, "percent": 0.49}
+,
+      {"timestamp": 0.306, "kib": 176528, "percent": 1.10}
+,
+      {"timestamp": 0.384, "kib": 227688, "percent": 1.41}
+,
+      {"timestamp": 0.446, "kib": 254668, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 29,
+    "samples": [
+      {"timestamp": 0.011, "kib": 12264, "percent": 0.08}
+,
+      {"timestamp": 0.073, "kib": 63424, "percent": 0.39}
+,
+      {"timestamp": 0.131, "kib": 75388, "percent": 0.47}
+,
+      {"timestamp": 0.190, "kib": 75704, "percent": 0.47}
+,
+      {"timestamp": 0.249, "kib": 83972, "percent": 0.52}
+,
+      {"timestamp": 0.310, "kib": 177960, "percent": 1.11}
+,
+      {"timestamp": 0.380, "kib": 231076, "percent": 1.44}
+,
+      {"timestamp": 0.442, "kib": 254376, "percent": 1.58}
+
+    ]
+  }
+,
+  {
+    "run": 30,
+    "samples": [
+      {"timestamp": 0.011, "kib": 14600, "percent": 0.09}
+,
+      {"timestamp": 0.072, "kib": 62460, "percent": 0.39}
+,
+      {"timestamp": 0.130, "kib": 75620, "percent": 0.47}
+,
+      {"timestamp": 0.187, "kib": 75464, "percent": 0.47}
+,
+      {"timestamp": 0.246, "kib": 86224, "percent": 0.54}
+,
+      {"timestamp": 0.309, "kib": 180708, "percent": 1.12}
+,
+      {"timestamp": 0.383, "kib": 240716, "percent": 1.50}
+
+    ]
+  }
+]

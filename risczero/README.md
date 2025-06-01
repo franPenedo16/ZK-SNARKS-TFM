@@ -24,15 +24,39 @@ cargo-risczero: 2.0.2
 
 ### Files
 
-- **core/**: Definitions of Rust structs for input and output data.  
-- **host/**: Host-side Rust code that invokes the zkVM and generates the receipt.  
-- **methods/**: Guest-side Rust code (compiled to RISC-V) containing the circuit logic.  
-- **res/**: JSON file with public and private inputs for the guest program.  
-- **Cargo.toml**: Workspace configuration.
-- **code_id.bin**: Identifier for the compiled guest code used by the host at runtime.  
-- **receipt.bin**: The zk-STARK proof (“receipt”) produced by the zkVM.  
-- **rust-toolchain.toml**: Specifies the Rust toolchain version used for reproducible builds.
+- **core/**: 
+  Definitions of Rust structs for input and output data. 
+
+- **host/**: Host directory
+  - **src/**: 
+    Host-side Rust code that invokes the zkVM and generates the receipt.  
+
+  - **stats/**: 
+    Host-side Rust code that invokes the zkVM multiple times to collect memory usage metrics (PSS and RSS) and measure elapsed execution time.  
+
+- **methods/**: 
+  Guest-side Rust code (compiled to RISC-V) containing the circuit logic.  
+
+- **res/**: 
+  JSON file with public and private inputs for the guest program.  
+
+- **stats**:
+  Directory with json files with the collection of memory usage metrics (PSS and RSS) and measure elapsed execution time.
+
+- **Cargo.toml**: 
+  Workspace configuration.
+
+- **code_id.bin**: 
+  Identifier for the compiled guest code used by the host at runtime.  
+
+- **receipt.bin**: 
+  The zk-STARK proof (“receipt”) produced by the zkVM.  
+
+- **rust-toolchain.toml**: 
+  Specifies the Rust toolchain version used for reproducible builds.
 
 ### Commands to Generate the Proof
 
-`cargo run --release`=> Compiles and runs the host application, which in turn compiles the guest to RISC-V, executes it in the zkVM, and writes receipt.bin (the proof) along with the code_id.bin to the project root.
+`cargo run -p host --bin normal --release`=> Compiles and runs the host application, which in turn compiles the guest to RISC-V, executes it in the zkVM, and writes receipt.bin (the proof) along with the code_id.bin to the project root.
+
+`cargo run -p host --bin stats --release` => Compiles and runs the host application, which in turn compiles the guest to RISC-V, executes it multiple times in the zkVM, to collect memory usage metrics (PSS and RSS) and measure elapsed execution time. 
