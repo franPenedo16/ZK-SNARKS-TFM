@@ -27,7 +27,7 @@ The web application consists of the following components:
   - Authentication
   - Sudoku solution verification
 
-### Proof
+## Proof
 
 The circuit compilation is executed before launching both the front end and back end of the application, following the Powers of Tau ceremony.
 
@@ -64,7 +64,7 @@ The hash is generated using the Poseidon hash function, following these steps:
 
 The control date ensures the proof is valid for only 5 minutes. Even if the proof verifies correctly, the server will reject it if the timestamp is outside the allowed time window.
 
-## Sudoku solution
+### Sudoku solution
 
 On the main page, users can solve a Sudoku puzzle and generate a proof that the solution is correct.
 
