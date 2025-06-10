@@ -1,19 +1,19 @@
-## LIBSNARK
+# LIBSNARK
 
-### Description  
+## Description  
 Libsnark is a C++ library for constructing and verifying zk-SNARK proofs. It provides low-level APIs to define Rank-1 Constraint Systems (R1CS), perform the trusted setup, generate proofs, and verify them.
 
-### Code base  
+## Code base  
 The code in this project are based on the tutorials from the [libsnark-tutorial repository](https://github.com/coder5876/libsnark-tutorial), which demonstrate:
 - Defining constraints in C++  
 - Running the trusted setup (key generation)  
 - Creating and exporting proofs  
 - Verifying proofs against a public key
 
-### Execution Environment
+## Execution Environment
 To ensure compatibility with libsnark and its dependencies (GMP, protobuf, etc.), all code runs inside a Docker container built from `ubuntu:16.04`. This guarantees a consistent build and runtime environment for compiling and executing libsnark-based circuits.
 
-### Files
+## Files
 
 - **check-ops/**:  
   Directory containing a custom gadget used to verify whether an array satisfies addition, multiplication, and exponentiation constraints as specified by the gadget parameters. It is used to validate Sudoku rules.
@@ -46,7 +46,7 @@ To ensure compatibility with libsnark and its dependencies (GMP, protobuf, etc.)
   Modified version of the `src/CMakeLists.txt` file to include and compile the custom gadgets and the `game.cpp` logic.
 
 
-### Commands to generate the proof
+## Commands to generate the proof
 
 `docker build -t libsnark-sudoku .` => Builds the Docker container using the specifications defined in the Dockerfile. The container includes all necessary dependencies to compile and run libsnark.
 

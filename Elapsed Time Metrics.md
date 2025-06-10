@@ -6,6 +6,6 @@ This document summarizes the elapsed execution time for each implementation eval
 | IMPLEMENTATION | ELAPSED TIME  | 
 | -----------    | ------------- |
 | Circom         |  0.39s        |
-| libsnark       |  0.61s        |
-| noir           |  0.14s        |
-| risc-zero      |  507.85s      |
+| Libsnark       |  0.61s        |
+| Noir           |  0.14s        |
+| RISC Zero      |  507.85s      |

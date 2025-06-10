@@ -1,81 +1,166 @@
-# Vuetify (Default)
+# ZKSNARK-APP
 
-This is the official scaffolding tool for Vuetify, designed to give you a head start in building your new Vuetify application. It sets up a base template with all the necessary configurations and standard directory structure, enabling you to begin development without the hassle of setting up the project from scratch.
+## Description
+ZKSNARK-APP is a web application that demonstrates the use of zero-knowledge proofs (ZKPs), built with the help of Circom, to showcase how a basic client-server architecture can implement zero-trust authentication. Additionally, it features peer-to-peer verification for task completion.
 
-## ❗️ Important Links
+The application includes a web-based authentication system and allows users to solve daily Sudoku puzzles at easy, medium, and hard difficulty levels. After solving a puzzle, users can generate a zero-knowledge proof of their solution. Other users can then verify these proofs, enabling a decentralized trust model. The platform also includes a blocking mechanism, allowing users to block others who attempt to validate incorrect solutions. Each user maintains their own block list, and verification attempts from blocked users are hidden—ensuring that users only see verifications from trusted participants and helping maintain the integrity of the network.
 
-- 📄 [Docs](https://vuetifyjs.com/)
-- 🚨 [Issues](https://issues.vuetifyjs.com/)
-- 🏬 [Store](https://store.vuetifyjs.com/)
-- 🎮 [Playground](https://play.vuetifyjs.com/)
-- 💬 [Discord](https://community.vuetifyjs.com)
+Sudoku puzzles are generated using the [API](https://www.api-ninjas.com/api/sudoku) Ninjas service.
 
-## 💿 Install
+## Components
 
-Set up your project using your preferred package manager. Use the corresponding command to install the dependencies:
+The web application consists of the following components:
 
-| Package Manager                                                | Command        |
-|---------------------------------------------------------------|----------------|
-| [yarn](https://yarnpkg.com/getting-started)                   | `yarn install` |
-| [npm](https://docs.npmjs.com/cli/v7/commands/npm-install)     | `npm install`  |
-| [pnpm](https://pnpm.io/installation)                          | `pnpm install` |
-| [bun](https://bun.sh/#getting-started)                        | `bun install`  |
+- FrontEnd: Built with Node and Vue.js, using Vuetify for crafting responsive and modern UI components.
+  
+- BackEnd: Developed with Node.js and Express to handle HTTP requests and manage communication with the database.
+  
+- Database: A lightweight SQLite database structured with the following tables:
+  
+  - user (id, username, dni, hash)
+  - sudokus (id, problem, solution, date, level)
+  - resolved (id, FK user, FK sudoku, proof, public_inputs)
+  - verifications (id, FK verifier, FK solution)
+  - blocks (id, FK user, FK blocked_user)
+  
+- Proofs: Implemented using Circom, with dedicated circuits for:
+  - Authentication
+  - Sudoku solution verification
 
-After completing the installation, your environment is ready for Vuetify development.
+### Proof
 
-## ✨ Features
+The circuit compilation is executed before launching both the front end and back end of the application, following the Powers of Tau ceremony.
 
-- 🖼️ **Optimized Front-End Stack**: Leverage the latest Vue 3 and Vuetify 3 for a modern, reactive UI development experience. [Vue 3](https://v3.vuejs.org/) | [Vuetify 3](https://vuetifyjs.com/en/)
-- 🗃️ **State Management**: Integrated with [Pinia](https://pinia.vuejs.org/), the intuitive, modular state management solution for Vue.
-- 🚦 **Routing and Layouts**: Utilizes Vue Router for SPA navigation and vite-plugin-vue-layouts-next for organizing Vue file layouts. [Vue Router](https://router.vuejs.org/) | [vite-plugin-vue-layouts-next](https://github.com/loicduong/vite-plugin-vue-layouts-next)
-- 💻 **Enhanced Development Experience**: Benefit from TypeScript's static type checking and the ESLint plugin suite for Vue, ensuring code quality and consistency. [TypeScript](https://www.typescriptlang.org/) | [ESLint Plugin Vue](https://eslint.vuejs.org/)
-- ⚡ **Next-Gen Tooling**: Powered by Vite, experience fast cold starts and instant HMR (Hot Module Replacement). [Vite](https://vitejs.dev/)
-- 🧩 **Automated Component Importing**: Streamline your workflow with unplugin-vue-components, automatically importing components as you use them. [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
-- 🛠️ **Strongly-Typed Vue**: Use vue-tsc for type-checking your Vue components, and enjoy a robust development experience. [vue-tsc](https://github.com/johnsoncodehk/volar/tree/master/packages/vue-tsc)
+The resulting files are placed in the front end’s public folder:
 
-These features are curated to provide a seamless development experience from setup to deployment, ensuring that your Vuetify application is both powerful and maintainable.
+- .zkey – proving key
 
-## 💡 Usage
+- .wasm – compiled circuit
 
-This section covers how to start the development server and build your project for production.
+- verification_key.json – for public verification
 
-### Starting the Development Server
+### Authentication
 
-To start the development server with hot-reload, run the following command. The server will be accessible at [http://localhost:3000](http://localhost:3000):
+During login, the user generates a zero-knowledge proof demonstrating knowledge of the correct password associated with a hashed value stored in the database.
 
-```bash
-yarn dev
-```
+The inputs for the circuits are:
+- DNI
+- Password
+- Stored user hash
+- Control date (timestamp of proof generation)
 
-(Repeat for npm, pnpm, and bun with respective commands.)
+Circuit Output (Public):
+- Hash calculated within the circuit
 
-> Add NODE_OPTIONS='--no-warnings' to suppress the JSON import warnings that happen as part of the Vuetify import mapping. If you are on Node [v21.3.0](https://nodejs.org/en/blog/release/v21.3.0) or higher, you can change this to NODE_OPTIONS='--disable-warning=5401'. If you don't mind the warning, you can remove this from your package.json dev script.
+The **user hash** and **control date** are public inputs to the circuit.
 
-### Building for Production
+The hash is generated using the Poseidon hash function, following these steps:
 
-To build your project for production, use:
+1. Compute Poseidon hash of the password.
 
-```bash
-yarn build
-```
+2. Concatenate the DNI number (excluding the letter).
 
-(Repeat for npm, pnpm, and bun with respective commands.)
+3. Compute Poseidon hash again with the result from step 2.
 
-Once the build process is completed, your application will be ready for deployment in a production environment.
+The control date ensures the proof is valid for only 5 minutes. Even if the proof verifies correctly, the server will reject it if the timestamp is outside the allowed time window.
 
-## 💪 Support Vuetify Development
+## Sudoku solution
 
-This project is built with [Vuetify](https://vuetifyjs.com/en/), a UI Library with a comprehensive collection of Vue components. Vuetify is an MIT licensed Open Source project that has been made possible due to the generous contributions by our [sponsors and backers](https://vuetifyjs.com/introduction/sponsors-and-backers/). If you are interested in supporting this project, please consider:
+On the main page, users can solve a Sudoku puzzle and generate a proof that the solution is correct.
 
-- [Requesting Enterprise Support](https://support.vuetifyjs.com/)
-- [Sponsoring John on Github](https://github.com/users/johnleider/sponsorship)
-- [Sponsoring Kael on Github](https://github.com/users/kaelwd/sponsorship)
-- [Supporting the team on Open Collective](https://opencollective.com/vuetify)
-- [Becoming a sponsor on Patreon](https://www.patreon.com/vuetify)
-- [Becoming a subscriber on Tidelift](https://tidelift.com/subscription/npm/vuetify)
-- [Making a one-time donation with Paypal](https://paypal.me/vuetify)
+The inputs for the circuit are:
+- Password
+- DNI
+- User hash
+- Sudoku problem
+- Sudoku solution
 
-## 📑 License
-[MIT](http://opensource.org/licenses/MIT)
+Circuit Output (Public):
+- Sudoku problem
+- User hash
 
-Copyright (c) 2016-present Vuetify, LLC
+The hash is calculated using the same method as in the authentication circuit.
+
+The circuit checks:
+
+- That the provided solution is valid for the given Sudoku puzzle.
+- That the proof is bound to a specific user by including the hash, ensuring uniqueness.
+
+The circuit validates that the solution is correct and correspond to the problem.
+
+This proves not only that the user solved the puzzle correctly but also that they are authenticated as the rightful owner of the associated password and user hash.
+
+## Flows
+### Login
+- ### Login Screen
+  
+![Login Screen](/Images/LoginScreen.png)
+
+- Login Flow
+  
+![Login Flow](/Images/Login.png)
+
+### Sudoku
+- ### Sudoku Screen
+  
+![Sudoku Solve Screen](/Images/SudokuScreen.png)
+
+- ### Sudoku Password Screen
+  
+![Sudoku Pass Screen](/Images/SudokuPassScreen.png)
+
+- ### Sudoku Solve Flow
+  
+![Sudoku Solve Flow](/Images/Sudoku.png)
+
+### Verifications
+- ###  Verifications Screen
+  
+![Verify Screen](/Images/VerifyScreen.png)
+
+- ### Verifications Block screen
+  
+![Verify Block Screen](/Images/BlockScreen.png)
+
+- ### Verifications Flow
+  
+![Verify Flow](/Images/Verify.png)
+
+
+### Setup
+
+To launch the application, follow these steps:
+
+1. Configure Environment Variables
+Create a `.env` file in the backend directory. You can use the provided `.env-test` file as a reference.
+
+2. Install Dependencies and Run Servers
+   
+- In the backend directory (`zksnark-app/backend`), run:
+  
+    `npm install`
+
+    `node server.js`
+
+
+- In the frontend (`zksnark-app`) run:
+  
+    `npm install`
+  
+    `npm run dev`
+
+3. Recompile Circuits (If Needed)
+
+    If you need to modify the Circom circuits, follow the instructions provided in [/circom/README.md](/circom/README.md)
+
+    After recompiling, make sure to place the output files (`.wasm`, `.zkey`, and `verification_key.json`) in the following directories:
+
+   - `zksnark-app/backend/circuits/auth` && `zksnark-app/public/circuits/auth`
+   - `zksnark-app/backend/circuits/sudokus` && `zksnark-app/public/circuits/sudokus`
+
+4. Access the Database (If Needed)
+
+    To inspect or modify the SQLite database directly, use the following command:
+
+    `sqlite3 database.db`
+

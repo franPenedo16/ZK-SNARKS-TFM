@@ -1,12 +1,12 @@
-## NOIR
+# NOIR
 
-### Description  
+## Description  
 Noir is a domain-specific language (DSL) designed for writing zero-knowledge circuits in a simple and readable syntax. It abstracts the complexity of constraint systems and focuses on developer productivity and circuit portability across proving systems.
 
-### Prover: Barretenberg  
+## Prover: Barretenberg  
 Noir uses the Barretenberg (bb) proving system to compile, prove, and verify the circuits. While Noir handles circuit definition, Barretenberg performs the actual cryptographic operations, including generating and verifying the zk-SNARK proofs.
 
-### Version Used
+## Version Used
 
 - nargo version: 1.0.0-beta.3  
   
@@ -14,7 +14,7 @@ Noir uses the Barretenberg (bb) proving system to compile, prove, and verify the
   
 - barretenberg version: 0.82.2  
 
-### Files
+## Files
 
 - **src/**: 
   Contains the Noir source file (.nr) with the circuit logic.
@@ -41,7 +41,7 @@ Noir uses the Barretenberg (bb) proving system to compile, prove, and verify the
   Input configuration for the circuit execution, equivalent to the JSON used by other frameworks to supply public and private inputs.
   
 
-### Commands to Generate the Proof
+## Commands to Generate the Proof
 
 `nargo check` => Command to generate the Prover.toml file.
 

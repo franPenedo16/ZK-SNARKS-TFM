@@ -5,3 +5,4 @@ risczero/target
 Cargo.lock
 package-lock.json
 .env
+database.db

@@ -109,32 +109,50 @@ Using a consistent prime field for Poseidon ensures interoperability of the hash
 
 ## THE IMPLEMENTATIONS
 
-### Circom
+### [Circom](circom/README.md)
 https://docs.circom.io
 
 Circom is a domain-specific language designed for writing arithmetic circuits used in zk-SNARKs. It provides a simple syntax to define constraints and supports modularity through templates. It is widely used with the snarkJS toolkit.
 
-### RISC Zero
+### [RISC Zero](risczero/README.md)
 https://www.risczero.com
 
 RISC Zero is a zkVM (zero-knowledge virtual machine) that allows developers to generate zero-knowledge proofs for programs written in Rust. It uses a custom RISC-V-compatible virtual machine and STARK-based proof system, enabling general-purpose ZK computing.
 
-### Noir
+### [Noir](noir/README.md)
 https://noir-lang.org
 
 Noir is a Rust-inspired programming language for writing zero-knowledge circuits. Developed by the Aztec team, it focuses on readability, developer experience, and seamless integration with backends like Barretenberg.
 
-### Libsnark
+### [Libsnark](libsnark/README.md)
 https://github.com/scipr-lab/libsnark
 
 Libsnark is one of the first C++ libraries developed for zk-SNARKs. It provides low-level tools for constructing and verifying proofs, serving as the foundation for many early ZK projects. While older, it remains a reference in the space.
 
+## THE TESTS
+
+This section provides an overview of the benchmarking and evaluation tests conducted across four different zero-knowledge proof (ZKP) implementations: Circom, Libsnark, Noir, and RISC Zero. The goal of these tests is to assess and compare the performance, memory usage, and artifact sizes when generating zero-knowledge proofs for the same logic (DNI validation, password hashing, and Sudoku solving).
+
+Included Benchmark Files:
+
+[Elapsed Time Metrics](Elapsed%20Time%20Metrics.md)
+Measures the total execution time needed to generate a proof in each implementation. Noir performs the fastest, while RISC Zero is significantly slower due to its architecture and execution model.
+
+[Proof and Verification Key Sizes Comparison](Proof%20and%20Verification%20Key%20Sizes.md)
+Reports the size (in bytes) of the proof files and verification keys produced by each framework. This helps evaluate storage and transmission efficiency. Note: RISC Zero uses a code image ID instead of a traditional verification key.
+
+[PSS and RSS Metrics](Proof%20and%20Verification%20Key%20Sizes.md)
+Details memory usage statistics for each implementation:
+
+- PSS (Proportional Set Size): Reflects the exclusive and proportionate use of shared memory.
+
+- RSS (Resident Set Size): Reflects the total physical memory used.
 
 
+These tests collectively provide a comparative perspective on the trade-offs between performance, memory usage, and artifact size among leading ZKP frameworks.
 
+The script **stats.py** is intended to quickly summarize the performance metrics for each framework using real benchmark data. It provides a command-line interface where the user specifies the implementation to analyze. It reads memory and execution time logs from the corresponding stats/ directory and computes: Average and peak memory usage & Average elapsed execution time.
 
+## [DEMO APP](/zksnark-app/README.md)
 
-
-    
-
-
+An application built with Vuetify, Express.js, and Circom to demonstrate how Zero-Knowledge Proofs (ZKP) can enhance the development of secure authentication and verification systems.
