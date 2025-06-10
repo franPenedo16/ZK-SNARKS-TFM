@@ -141,7 +141,7 @@ Measures the total execution time needed to generate a proof in each implementat
 [Proof and Verification Key Sizes Comparison](Proof%20and%20Verification%20Key%20Sizes.md)
 Reports the size (in bytes) of the proof files and verification keys produced by each framework. This helps evaluate storage and transmission efficiency. Note: RISC Zero uses a code image ID instead of a traditional verification key.
 
-[PSS and RSS Metrics](Proof%20and%20Verification%20Key%20Sizes.md)
+[PSS and RSS Metrics](/Pss%20and%20Rss%20Metrics.md)
 Details memory usage statistics for each implementation:
 
 - PSS (Proportional Set Size): Reflects the exclusive and proportionate use of shared memory.
